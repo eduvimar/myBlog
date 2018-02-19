@@ -3,7 +3,7 @@ jobs:
   build-job:
     docker:
       - image: cibuilds/hugo:lastest
-    working_directory: ~/project
+    working_directory: ~/myproject
     steps:
       - checkout
       - run: 
