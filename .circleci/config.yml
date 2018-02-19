@@ -20,6 +20,13 @@ jobs:
       - run: 
           name: "Run Hugo"
           command: HUGO_ENV=production hugo -v -s ~/project/
+  release-job:
+    branches:
+      only:
+        - master
+    steps:
+      - ghr -t $GITHUB_TOKEN -u $CIRCLE_PROJECT_USERNAME -r $CIRCLE_PROJECT_REPONAME --replace `git describe --tags` ~/project/
+
 
 workflows:
   version: 2
@@ -28,10 +35,3 @@ workflows:
       - build-job
       - realease-job
 
-jobs: 
-  release-job:
-    branches: 
-      only:
-        - master
-    steps:
-      - ghr -t $GITHUB_TOKEN -u $CIRCLE_PROJECT_USERNAME -r $CIRCLE_PROJECT_REPONAME --replace `git describe --tags` ~/project/
