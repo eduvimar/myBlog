@@ -2,8 +2,8 @@ version: 2
 jobs:
   build-job:
     docker:
-      - image: cibuilds/hugo:lastest
-    working_directory: ~/myproject
+      - image: cibuilds/hugo:0.28
+    working_directory: ~/project
     steps:
       - checkout
       - run: 
