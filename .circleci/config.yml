@@ -25,11 +25,3 @@ workflows:
   build-deploy:
     jobs:
       - build-job
-
-jobs:
-  release-job:
-    jobs:
-      - build-deploy
-      - deployment
-        
-      
