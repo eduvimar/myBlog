@@ -11,6 +11,9 @@ jobs:
           name: "Run Hugo"
           command: HUGO_ENV=production hugo -v -s ~/project/
   deploy-job:
+    docker: 
+      - image: cibuilds/hugo:0.28
+    working-directory: ~/project
     steps:
       - run:
           command: |
