@@ -10,7 +10,7 @@ jobs:
       - run: 
           name: "Run Hugo"
           command: HUGO_ENV=production hugo -v -s ~/project/
-- deploy:
+  deploy:
     command: |
       if [ "${CIRCLE_BRANCH}" == "master" ]; then
         echo "ya es es master"
@@ -21,3 +21,4 @@ workflows:
   build-deploy:
     jobs:
       - build
+      - deploy
