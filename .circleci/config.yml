@@ -17,9 +17,7 @@ jobs:
     steps:
       - run:
           command: |
-            git config --global user.email "eduardo.villasenor@dsindigo.mx"
-            git config --global user.name "CircleCI"
-            git tag
+            ls
            
 
 workflows:
