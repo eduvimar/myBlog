@@ -19,7 +19,7 @@ jobs:
           command: |
             if [ "$CIRCLE_BRANCH" = "master"]; then
               echo "Hello From master"
-	      git tag
+              git tag
             fi
            
 
