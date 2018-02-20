@@ -1,11 +1,7 @@
 version: 2
-dependencies: 
-  pre:
-  - go get github.com/tcnksm/ghr
-
 
 jobs:
-  build-job:
+  build:
     docker:
       - image: cibuilds/hugo:0.28
     working_directory: ~/project
