@@ -13,7 +13,7 @@ jobs:
   deploy-job:
     docker: 
       - image: cibuilds/hugo:0.28
-    working-directory: ~/project
+    working-directory: ~/myBlog
     steps:
       - run:
           command: |
