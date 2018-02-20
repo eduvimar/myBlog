@@ -27,6 +27,4 @@ workflows:
   build-deploy:
     jobs:
       - build-job
-  release-deploy:
-    jobs:
       - deploy-job
