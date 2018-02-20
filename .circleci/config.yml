@@ -21,8 +21,7 @@ jobs:
       only:
         - master
     steps:
-      - ghr -t $GITHUB_TOKEN -u $CIRCLE_PROJECT_USERNAME -r $CIRCLE_PROJECT_REPONAME --replace `git describe --tags` ~/project/
-
+      - echo "Job master"
 
 workflows:
   version: 2
