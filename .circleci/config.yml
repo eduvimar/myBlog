@@ -4,7 +4,7 @@ jobs:
   build-job:
     docker:
       - image: cibuilds/hugo:0.28
-    working_directory: ~/project
+    working_directory: ~/myblog
     steps:
       - checkout
       - run: 
