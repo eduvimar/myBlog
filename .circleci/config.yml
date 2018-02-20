@@ -14,14 +14,11 @@ jobs:
       - run: 
           name: "Run Hugo"
           command: HUGO_ENV=production hugo -v -s ~/project/
-  release-job:
-    docker: 
-      - image: cibuilds/hugo:0.28
-    branches:
-      only:
-        - master
-    steps:
-      - echo "Job master"
+- deploy:
+    command: |
+      if [ "${CIRCLE_BRANCH}" == "master" ]; then
+        echo "ya es es master"
+      fi
 
 workflows:
   version: 2
