@@ -15,6 +15,7 @@ jobs:
       - image: cibuilds/hugo:0.28
     working-directory: ~/project
     steps:
+      - checkout
       - run:
           command: |
             git tag
