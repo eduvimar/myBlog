@@ -18,7 +18,7 @@ jobs:
       - run:
           command: |
             echo "Hello From master"
-            git tag
+            - git tag
            
 
 workflows:
