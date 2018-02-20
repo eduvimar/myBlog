@@ -17,10 +17,8 @@ jobs:
     steps:
       - run:
           command: |
-            if [ "$CIRCLE_BRANCH" = "master"]; then
-              echo "Hello From master"
-              git tag
-            fi
+            echo "Hello From master"
+            git tag
            
 
 workflows:
