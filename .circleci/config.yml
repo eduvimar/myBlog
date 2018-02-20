@@ -20,7 +20,7 @@ jobs:
           command: |
             git config --global user.email "eduardo.villasenor@dsindigo.mx"
             git config --global user.name "CircleCI"
-            git tag -a v2.0
+            git tag -a v2.0 -m "Second version"
            
 
 workflows:
