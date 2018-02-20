@@ -15,4 +15,4 @@ workflows:
   version: 2
   build-deploy:
     jobs:
-      - buid-job
+      - build-job
